@@ -1,0 +1,66 @@
+{
+  "name": "kodak-arduino-studio",
+  "version": "0.1.0",
+  "description": "All-in-one desktop app for AI content creation, video editing, Arduino tools, and collaboration",
+  "main": "src/main.js",
+  "homepage": "./",
+  "author": "Smith4jude",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-build": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "axios": "^1.6.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "serialport": "^9.2.8",
+    "sqlite3": "^5.1.6",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^24.6.4",
+    "concurrently": "^8.2.0",
+    "wait-on": "^7.0.1",
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "build": {
+    "appId": "com.kodak.arduino.studio",
+    "productName": "Kodak Arduino Studio Ultimate",
+    "files": [
+      "build/**/*",
+      "src/main.js",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
